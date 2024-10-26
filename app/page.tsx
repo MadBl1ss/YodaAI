@@ -81,7 +81,7 @@ export default function Chat() {
           </div>
         ))
       ) : (
-        <div className="border-accent mx-5 mt-10 max-w-screen-md rounded-md border sm:w-full">
+        <div className="border-accent mx-5 mt-6 max-w-screen-md rounded-md border sm:w-full">
           <div className="flex flex-col space-y-4 p-7 sm:p-10">
               <Image src="/yoda_ai.jpg" alt="banner" height={100} width={200} className="hover:hue-rotate-180"/>
             <h1 className="text-lg font-bold text-accent">
