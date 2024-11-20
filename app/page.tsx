@@ -35,7 +35,7 @@ export default function Chat() {
   return (
     <main className="flex flex-col items-center justify-between pb-40">
       <div className="pt-5 w-full justify-center px-5 gap-10 flex">
-        <a href="https://dexscreener.com/solana/bqbfvwu7jw7rtyqkwrgytnjtdhabahemucdt1nsgluyv" target="_blank">
+        <a href="#" target="_blank">
         {/* <Image src="/pump-icon.png" alt="pump.fun" width={45} height={45}/> */}
         <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" width={45} height={45}>
           <path d="M62.6526 16.6167C63.4175 14.3625 60.5264 12.6934 58.9554 14.4793L56.155 17.6656C55.0196 18.958 53.5269 19.8853 51.8652 20.3306C50.2035 20.7758 48.4472 20.7191 46.8178 20.1675L42.7993 18.8083C40.5459 18.0472 38.8776 20.9418 40.6671 22.5116L43.8526 25.3081C45.1451 26.4433 46.0724 27.9359 46.5176 29.5974C46.9628 31.259 46.906 33.0152 46.3543 34.6446L44.9948 38.6628C44.23 40.917 47.1211 42.5861 48.6911 40.7966L51.4915 37.6103C52.6269 36.3179 54.1195 35.3906 55.7812 34.9453C57.4429 34.5001 59.1993 34.5568 60.8287 35.1084L64.8472 36.4676C67.1015 37.2323 68.7708 34.3413 66.9803 32.7679L63.7948 29.9714C62.5024 28.8362 61.5751 27.3436 61.1299 25.6821C60.6847 24.0205 60.7415 22.2643 61.2931 20.6349L62.6526 16.6167Z" fill="#DFFF16"></path>
