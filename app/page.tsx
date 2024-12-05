@@ -85,9 +85,8 @@ export default function Chat() {
         <div className="border-accent mx-5 mt-6 max-w-screen-md rounded-md border sm:w-full">
           <div className="flex flex-col space-y-4 p-7 sm:p-10">
               <Image src="/yoda_ai.jpg" alt="banner" height={100} width={200} className="hover:hue-rotate-180"/>
-            <h1 className="text-lg font-bold text-accent">
-              Hi, I'm Yoda AI
-            </h1>
+              <h1 className="text-lg font-bold text-accent">Hi, I'm Yoda AI</h1>
+
             <p className="text-accent font-medium">
               Meet the AI with the wisdom of a galaxy far, far away. Yoda AI provides thoughtful responses, cryptic insights,
               and Jedi-like guidance. Ask your question, and uncover the mysteries of the universe through the voice of a true Jedi master.
@@ -99,64 +98,65 @@ export default function Chat() {
           <div className="flex flex-col space-y-4 border-t border-accent p-7 sm:p-10">
             {examples.map((example, i) => (
               <button
-                key={i}
-                className="rounded-md border border-gray-200 bg-accent px-5 py-3 text-left text-sm font-semibold text-black transition-all duration-75 hover:bg-accent/65 hover:border-black active:bg-[#58D491]"
-                onClick={() => {
-                  setInput(example);
-                  inputRef.current?.focus();
-                }}
-              >
-                {example}
-              </button>
+  key={i}
+  className="rounded-md border border-accent bg-black px-5 py-3 text-accent transition-colors duration-300 hover:border-pinkneon hover:text-pinkneon"
+  onClick={() => {
+    setInput(example);
+    inputRef.current?.focus();
+  }}
+>
+  {example}
+</button>
+
             ))}
           </div>
         </div>
       )}
       <div className="fixed bottom-0 flex w-full flex-col items-center space-y-3  p-5 pb-3 sm:px-0">
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="relative w-full max-w-screen-md rounded-xl border border-gray-200 bg-accent text-black font-semibold px-4 pb-2 pt-3 shadow-lg sm:pb-3 sm:pt-4"
-        >
-          <Textarea
-            ref={inputRef}
-            tabIndex={0}
-            required
-            rows={1}
-            autoFocus
-            placeholder="Send a message"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" && !e.shiftKey) {
-                formRef.current?.requestSubmit();
-                e.preventDefault();
-              }
-            }}
-            spellCheck={false}
-            className="w-full pr-10 focus:outline-none text-black bg-accent placeholder-black"
-          />
-          <button
-            className={clsx(
-              "absolute inset-y-0 right-3 my-auto flex h-8 w-8 items-center justify-center rounded-md transition-all",
-              disabled
-                ? "cursor-not-allowed"
-                : "bg-green-500 hover:bg-green-600",
-            )}
-            disabled={disabled}
-          >
-            {isLoading ? (
-              <LoadingCircle />
-            ) : (
-              <SendIcon
-                className={clsx(
-                  "h-4 w-4",
-                  input.length === 0 ? "text-gray-300" : "text-black",
-                )}
-              />
-            )}
-          </button>
-        </form>
+      <form
+  ref={formRef}
+  onSubmit={handleSubmit}
+  className="relative w-full max-w-screen-md rounded-xl border border-accent bg-black text-white font-semibold px-4 pb-2 pt-3 shadow-lg sm:pb-3 sm:pt-4"
+>
+  <Textarea
+    ref={inputRef}
+    required
+    rows={1}
+    autoFocus
+    placeholder="Send a message"
+    value={input}
+    onChange={(e) => setInput(e.target.value)}
+    onKeyDown={(e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        formRef.current?.requestSubmit();
+        e.preventDefault();
+      }
+    }}
+    spellCheck={false}
+    className="w-full pr-10 focus:outline-none text-white bg-transparent placeholder-white"
+  />
+  <button
+    className={clsx(
+      "absolute inset-y-0 right-3 my-auto flex h-8 w-8 items-center justify-center rounded-md transition-all",
+      disabled
+        ? "cursor-not-allowed"
+        : "bg-accent hover:bg-blueneon"
+    )}
+    disabled={disabled}
+  >
+    {isLoading ? (
+      <LoadingCircle />
+    ) : (
+      <SendIcon
+        className={clsx(
+          "h-4 w-4",
+          input.length === 0 ? "text-gray-300" : "text-black"
+        )}
+      />
+    )}
+  </button>
+</form>
+
         <p className="text-center text-xs text-accent">
          May the Force be with you
         </p>

@@ -7,16 +7,18 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'accent': '#ADDE34',
-      'dgreen': '#022213',
-      'white': "#fff",
-      'black': "#000",
+      'accent': '#00FF00',  // Неоновый зелёный
+      'pinkneon': '#FF00FF',
+      'blueneon': '#00FFFF',
+      'purple': '#800080',
+      'black': '#000000',
+      'white': '#FFFFFF',
       transparent: 'transparent',
     },
     extend: {
       backgroundImage: {
-        'banner': "url(/public/banner.png')",
-      }
-    }
-  }
+        'banner': "url('/public/banner.png')",
+      },
+    },
+  },
 };
