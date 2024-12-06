@@ -12,7 +12,7 @@ import Textarea from "react-textarea-autosize";
 import Image from "next/image";
 
 const examples = [
-  "What will bring balance to the crypto market?",
+  "What must a trader follow to achieve harmony?",
   "What brings strength to a hodler?",
   "The path to wisdom, what is it?",
 ];
