@@ -92,7 +92,7 @@ export default function Chat() {
               and Jedi-like guidance. Ask your question, and uncover the mysteries of the universe through the voice of a true Jedi master.
             </p>
             <p className="text-accent break-words">
-              "CA: *"
+              CA: *
             </p>
           </div>
           <div className="flex flex-col space-y-4 border-t border-accent p-7 sm:p-10">
