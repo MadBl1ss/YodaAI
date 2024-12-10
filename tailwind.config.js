@@ -19,6 +19,15 @@ module.exports = {
       backgroundImage: {
         'banner': "url('/public/banner.png')",
       },
+      animation: {
+        'hue-rotate': 'hue-rotate 5s linear infinite',
+      },
+      keyframes: {
+        'hue-rotate': {
+          '0%': { filter: 'hue-rotate(0deg)' },
+          '100%': { filter: 'hue-rotate(360deg)' },
+        },
+      }
     },
   },
 };
