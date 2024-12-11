@@ -29,7 +29,7 @@ export default function Chat() {
   const disabled = isLoading || input.length === 0;
 
   return (
-    <main className="flex flex-col items-center justify-start min-h-screen relative">
+    <main className="flex flex-col min-h-screen items-center justify-start relative">
       {/* Верхняя панель с иконками */}
       <div className="pt-5 w-full justify-center px-5 gap-10 flex">
         <a href="#" target="_blank">
@@ -41,12 +41,11 @@ export default function Chat() {
       </div>
 
       {/* Контейнер с сообщениями (прокручиваемый) */}
-      <div className="flex-1 w-full max-w-screen-md px-5 sm:px-0 overflow-auto">
         {messages.length > 0 ? (
           messages.map((message, i) => (
             <div
               key={i}
-              className="flex w-full items-center justify-center py-8 bg-transparent"
+              className="flex w-full items-center justify-center py-4 bg-transparent"
             >
               <div className="flex w-full max-w-screen-md items-start space-x-4">
                 <div
@@ -74,12 +73,12 @@ export default function Chat() {
             </div>
           ))
         ) : (
-          <div className="border-accent mx-auto mt-6 max-w-screen-md w-full rounded-md border bg-transparent">
+          <div className="border-accent mx-auto mt-6 max-w-screen-md w-full rounded-md border bg-transparent sm:w-full">
             <div className="flex flex-col space-y-4 p-7 sm:p-10">
-              <Image src="/yoda_ai.jpg" alt="banner" height={100} width={200} className="animate-hue-rotate"/>
-              <h1 className="text-lg font-bold text-accent">Hi, I'm Yoda AI</h1>
+              <Image src="/yoda_ai.jpg" alt="banner" height={100} width={200} className="animate-hue-rotate hidden sm:block"/>
+              {/* <h1 className="text-lg font-bold text-accent">Hi, I'm Yoda AI</h1> */}
               <p className="text-accent font-medium">
-                Meet the AI with the wisdom of a galaxy far, far away. Yoda AI provides thoughtful responses, cryptic insights,
+                Meet the YODA AI with the wisdom of a galaxy far, far away. Yoda AI provides thoughtful responses, cryptic insights,
                 and Jedi-like guidance. Ask your question, and uncover the mysteries of the universe through the voice of a true Jedi master.
               </p>
               <p className="text-accent break-words">
@@ -102,10 +101,10 @@ export default function Chat() {
             </div>
           </div>
         )}
-      </div>
+        <div className="h-32"></div>
 
       {/* Фиксированная панель ввода внизу */}
-      <div className="fixed bottom-0 left-0 w-full flex justify-center p-5 pb-3 bg-black/50 backdrop-blur-sm border-t border-accent">
+      <div className="fixed bottom-0 w-full flex flex-col items-center space-y-3 p-5 pb-3 sm:px-0  backdrop-blur-sm border-t border-accent">
         <form
           ref={formRef}
           onSubmit={handleSubmit}

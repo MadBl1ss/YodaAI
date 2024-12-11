@@ -24,12 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} relative min-h-screen overflow-hidden text-white`}>
+      <body className={`${inter.className} relative min-h-screen text-white bg-black`}>
         {/* Фон Vanta */}
         <VantaBackground />
 
         {/* Полупрозрачный слой с контентом поверх фона */}
-        <div className="relative z-10 bg-black/50 backdrop-blur-sm min-h-screen flex flex-col">
+        <div className="relative z-10 min-h-screen flex flex-col bg-black/45 backdrop-blur-sm overflow-auto">
           {children}
           <Analytics />
         </div>
