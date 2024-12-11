@@ -28,6 +28,8 @@ export default function RootLayout({
       <VantaBackground />
       <div className="relative z-10 bg-black/50 backdrop-blur-sm">
           {children}
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
         </div>
         <Analytics />
       </body>
