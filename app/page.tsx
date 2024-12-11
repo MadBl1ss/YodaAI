@@ -32,7 +32,7 @@ export default function Chat() {
     <main className="flex flex-col min-h-screen items-center justify-start relative">
       {/* Верхняя панель с иконками */}
       <div className="pt-5 w-full justify-center px-5 gap-10 flex">
-        <a href="#" target="_blank">
+        <a href="https://pump.fun/coin/44zJDmYQ2ApKyZowE7cGkYex9wrttUDug1cNpJkFpump" target="_blank">
           <Image src="/pump-icon.png" alt="pump.fun" width={45} height={45}/>
         </a>
         <a href="https://x.com/0xYoda_sol" target="_blank">
@@ -84,7 +84,7 @@ export default function Chat() {
                  Ask, and the universe may reveal its answers through the voice of ancient knowledge
               </p>
               <p className="text-accent break-words">
-                CA: xxxxxxxxxxxxx
+                CA: 44zJDmYQ2ApKyZowE7cGkYex9wrttUDug1cNpJkFpump
               </p>
             </div>
             <div className="flex flex-col space-y-4 border-t border-accent p-7 sm:p-10">
