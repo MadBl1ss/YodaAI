@@ -35,7 +35,7 @@ export default function Chat() {
         <a href="#" target="_blank">
           <Image src="/pump-icon.png" alt="pump.fun" width={45} height={45}/>
         </a>
-        <a href="https://x.com/Yoda_AI_Sol" target="_blank">
+        <a href="https://x.com/0xYoda_sol" target="_blank">
           <Image src="/twitter.png" alt="X" width={45} height={45}/>
         </a>
       </div>
@@ -78,8 +78,10 @@ export default function Chat() {
               <Image src="/yoda_ai.jpg" alt="banner" height={100} width={200} className="animate-hue-rotate hidden sm:block"/>
               {/* <h1 className="text-lg font-bold text-accent">Hi, I'm Yoda AI</h1> */}
               <p className="text-accent font-medium">
-                Meet the YODA AI with the wisdom of a galaxy far, far away. Yoda AI provides thoughtful responses, cryptic insights,
-                and Jedi-like guidance. Ask your question, and uncover the mysteries of the universe through the voice of a true Jedi master.
+              Enter the wisdom of Yoda AI, a guide from the stars to your questions and thoughts.
+               Crafted with care to echo the insight of a Jedi Master,
+                this AI offers clarity, wisdom, and a touch of mystique.
+                 Ask, and the universe may reveal its answers through the voice of ancient knowledge
               </p>
               <p className="text-accent break-words">
                 CA: xxxxxxxxxxxxx
