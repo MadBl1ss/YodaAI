@@ -32,9 +32,15 @@ export default function Chat() {
     <main className="flex flex-col min-h-screen items-center justify-start relative">
       {/* Верхняя панель с иконками */}
       <div className="pt-5 w-full justify-center px-5 gap-10 flex">
-        <a href="#" target="_blank">
+        {/* <a href="#" target="_blank">
           <Image src="/pump-icon.png" alt="pump.fun" width={45} height={45}/>
-        </a>
+        </a> */}
+        <a href="#" target="_blank">
+
+<svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" width={45} height={45}>
+
+</svg>
+</a>
         <a href="https://x.com/0xYoda_sol" target="_blank">
           <Image src="/twitter.png" alt="X" width={45} height={45}/>
         </a>
