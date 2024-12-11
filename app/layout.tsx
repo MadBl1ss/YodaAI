@@ -10,11 +10,11 @@ export const metadata = {
   title: "Yoda AI",
   description:
     "Yoda is an AI bot that speaks in the wise and cryptic style of Master Yoda, from Star Wars",
-    openGraph: {
-      title: 'Yoda AI',
-      description: 'Yoda is an AI bot that speaks in the wise and cryptic style of Master Yoda, from Star Wars',
-      image: '/app/opengraph-image.png'
-    },
+  openGraph: {
+    title: 'Yoda AI',
+    description: 'Yoda is an AI bot that speaks in the wise and cryptic style of Master Yoda, from Star Wars',
+    image: '/app/opengraph-image.png'
+  },
 }
 
 export default function RootLayout({
@@ -25,13 +25,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} relative min-h-screen overflow-hidden text-white`}>
-      <VantaBackground />
-      <div className="relative z-10 bg-black/50 backdrop-blur-sm">
+        {/* Фон Vanta */}
+        <VantaBackground />
+
+        {/* Полупрозрачный слой с контентом поверх фона */}
+        <div className="relative z-10 bg-black/50 backdrop-blur-sm min-h-screen flex flex-col">
           {children}
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+          <Analytics />
         </div>
-        <Analytics />
+
+        {/* Скрипты для three.js и vanta (если необходимо) */}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
       </body>
     </html>
   )
