@@ -1,7 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
-import VantaBackground from './components/VantaBackground'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,11 +24,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} relative min-h-screen text-white bg-black`}>
-        {/* Фон Vanta */}
-        <VantaBackground />
-
-        {/* Полупрозрачный слой с контентом поверх фона */}
-        <div className="relative z-10 min-h-screen flex flex-col bg-black/45 backdrop-blur-sm overflow-auto">
+      <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        >
+          <source src="/bg.mp4" type="video/mp4" />
+        </video>
+        <div className="relative z-10 min-h-screen flex flex-col backdrop-blur-none overflow-auto">
           {children}
           <Analytics />
         </div>
